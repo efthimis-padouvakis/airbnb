@@ -7,7 +7,7 @@ import { FaCalendarAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const images = [
-  "/HeroRoom/room1.jpg",
+  "/HeroRoom/room1.jpg", //fdfdfdfd
   "/HeroRoom/room2.jpg",
   "/HeroRoom/room3.jpg",
 ];
