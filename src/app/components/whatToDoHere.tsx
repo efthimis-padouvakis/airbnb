@@ -22,7 +22,7 @@ const activities = [
 
 export default function WhatToDoHere() {
   return (
-    <section className="bg-[#f6f6f6] py-12 px-4 sm:px-8 md:px-16">
+    <section id="About" className="bg-[#f6f6f6] py-12 px-4 sm:px-8 md:px-16">
       <h1 className="text-4xl sm:text-4xl font-bold text-center mb-8 text-gray-800">
         What to do here
       </h1>

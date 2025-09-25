@@ -1,3 +1,7 @@
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/thumbs";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

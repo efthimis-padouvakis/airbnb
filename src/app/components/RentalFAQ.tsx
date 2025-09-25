@@ -42,40 +42,45 @@ export default function RentalFAQ() {
   };
 
   return (
-    <div className="max-w-3xl mx-auto py-10 px-4">
-      <h2 className="text-3xl font-bold text-center mb-8">
-        Frequently Asked Questions
-      </h2>
-      <div className="space-y-4">
-        {faqs.map((faq, index) => {
-          const isOpen = openIndex === index;
+    <section id="faq">
+      <div className="max-w-3xl mx-auto py-10 px-4">
+        <h2 className="text-3xl font-bold text-center mb-8">
+          Frequently Asked Questions
+        </h2>
+        <div className="space-y-4">
+          {faqs.map((faq, index) => {
+            const isOpen = openIndex === index;
 
-          return (
-            <div key={index} className=" rounded-xl shadow-xl transition-all ">
-              <button
-                onClick={() => toggle(index)}
-                className={`w-full text-left px-6 py-4 font-medium text-lg flex justify-between items-center transition-colors  ${
-                  isOpen ? "bg-blue-50 text-blue-800" : "bg-white"
-                }`}
+            return (
+              <div
+                key={index}
+                className=" rounded-xl shadow-xl transition-all "
               >
-                <span>{faq.question}</span>
-                <span
-                  className={`transform transition-transform duration-300 ${
-                    isOpen ? "rotate-180" : ""
+                <button
+                  onClick={() => toggle(index)}
+                  className={`w-full text-left px-6 py-4 font-medium text-lg flex justify-between items-center transition-colors  ${
+                    isOpen ? "bg-blue-50 text-blue-800" : "bg-white"
                   }`}
                 >
-                  <ChevronDown className="h-4 w-4" />
-                </span>
-              </button>
-              {isOpen && (
-                <div className="bg-blue-50 px-6 pb-4 text-blue-800 transition-all duration-300">
-                  {faq.answer}
-                </div>
-              )}
-            </div>
-          );
-        })}
+                  <span>{faq.question}</span>
+                  <span
+                    className={`transform transition-transform duration-300 ${
+                      isOpen ? "rotate-180" : ""
+                    }`}
+                  >
+                    <ChevronDown className="h-4 w-4" />
+                  </span>
+                </button>
+                {isOpen && (
+                  <div className="bg-blue-50 px-6 pb-4 text-blue-800 transition-all duration-300">
+                    {faq.answer}
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
