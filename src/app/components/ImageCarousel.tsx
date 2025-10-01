@@ -6,7 +6,8 @@ import { Navigation, Thumbs } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
-
+import Image from "next/image";
+import type { Swiper as SwiperType } from "swiper";
 const images = [
   "/roomCarousel/1.jpg",
   "/roomCarousel/2.jpg",
@@ -19,7 +20,7 @@ const images = [
 ];
 
 export default function ImageCarousel() {
-  const [thumbsSwiper, setThumbsSwiper] = useState<any>(null);
+  const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
 
   return (
     <section id="gallery" className="w-full py-16 bg-gray-50">
@@ -40,10 +41,12 @@ export default function ImageCarousel() {
         >
           {images.map((src, i) => (
             <SwiperSlide key={i}>
-              <img
+              <Image
                 src={src}
                 alt={`Room ${i + 1}`}
                 className="w-full h-[60vh] object-cover rounded-xl"
+                width={800}
+                height={600}
               />
             </SwiperSlide>
           ))}
@@ -60,10 +63,12 @@ export default function ImageCarousel() {
         >
           {images.map((src, i) => (
             <SwiperSlide key={i}>
-              <img
+              <Image
                 src={src}
                 alt={`Thumb ${i + 1}`}
                 className="w-full h-24 object-cover rounded-md cursor-pointer border border-gray-300 hover:border-yellow-500 transition"
+                width={800}
+                height={600}
               />
             </SwiperSlide>
           ))}

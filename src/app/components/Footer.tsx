@@ -1,14 +1,20 @@
 "use client";
 
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
-
+import Image from "next/image";
 export default function Footer() {
   return (
     <footer className="bg-gray-800 text-white pt-12 pb-6">
       <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-10">
         {/* Column 1 - Logo + About */}
         <div>
-          <img src="/logo.svg" alt="Logo" className="w-28 mb-4" />
+          <Image
+            src="/logo.svg"
+            alt="Logo"
+            width={112}
+            height={40}
+            className="w-28 mb-4"
+          />
           <p className="text-gray-200 text-sm">
             Cozy apartments in Greece. Enjoy your stay with comfort and style.
           </p>

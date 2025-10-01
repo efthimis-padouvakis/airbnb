@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import BookingModal from "./BookingModal";
-
+import Image from "next/image";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [showModal, setShowModal] = useState(false);
@@ -25,7 +25,7 @@ export default function Navbar() {
             className="flex items-center gap-2 cursor-pointer"
             onClick={() => handleScroll("home")}
           >
-            <img src="/logo.svg" alt="Logo" className="w-20 h-10" />
+            <Image src="/logo.svg" alt="Logo" className="w-20 h-10" />
           </div>
 
           {/* Links (Desktop only) */}
